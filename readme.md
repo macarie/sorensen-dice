@@ -2,7 +2,7 @@
 
 > Measure how similar two strings are using the [Sørensen–Dice Coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
 
-[![Build](https://github.com/macarie/ksdc/workflows/test/badge.svg)](https://github.com/macarie/ksdc/actions?query=workflow%3Atest) [![Coverage Status](https://codecov.io/gh/macarie/ksdc/branch/next/graph/badge.svg)](https://codecov.io/gh/macarie/ksdc) [![GitHub](https://img.shields.io/github/license/macarie/ksdc?color=42cdad)](https://github.com/macarie/ksdc/blob/master/license)
+[![Test Results](https://github.com/macarie/ksdc/workflows/test/badge.svg?branch=next)](https://github.com/macarie/ksdc/actions?query=workflow%3Atest) [![Coverage Status](https://codecov.io/gh/macarie/ksdc/branch/next/graph/badge.svg)](https://codecov.io/gh/macarie/ksdc) [![GitHub](https://img.shields.io/github/license/macarie/ksdc?color=42cdad)](https://github.com/macarie/ksdc/blob/master/license)
 
 ## Install
 
