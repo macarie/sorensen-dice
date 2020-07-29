@@ -5,8 +5,13 @@
   "license": "MIT",
   "type": "module",
   "main": "./index.min.cjs",
+  "module": "./index.min.js",
   "exports": {
-    ".": "./index.min.js"
+    ".": {
+      "import": "./index.min.js",
+      "require": "./index.min.cjs",
+      "default": "./index.min.js"
+    }
   },
   "repository": {
     "type": "git",
