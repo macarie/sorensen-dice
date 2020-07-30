@@ -31,10 +31,10 @@ compareNightWith("night")
 
 findMatch(["heal", "thing"], "ideal")
 // => {
-// =>   bestMatch: { distance: 0.5714285714285714, index: 0, reference: 'heal' },
+// =>   bestMatch: { score: 0.5714285714285714, index: 0, reference: 'heal' },
 // =>   matches: [
-// =>     { distance: 0.5714285714285714, reference: 'heal' },
-// =>     { distance: 0, reference: 'thing' }
+// =>     { score: 0.5714285714285714, reference: 'heal' },
+// =>     { score: 0, reference: 'thing' }
 // =>   ]
 // => }
 
@@ -67,12 +67,12 @@ Compare `input` against a list of strings, `references`, returns an object that 
 ```typescript
 interface match {
   bestMatch: {
-    distance: number
+    score: number
     index: number
     reference: string
   }
   matches: Array<{
-    distance: number
+    score: number
     reference: string
   }>
 }

@@ -11,7 +11,7 @@ const createBigrams = (word) =>
     { value: word.length - 1 }
   )
 
-const calculateDistance = (reference, referenceString, input, inputString) => {
+const calculateScore = (reference, referenceString, input, inputString) => {
   if (Math.min(referenceString.length, inputString.length) <= 2) {
     return Number(Object.is(referenceString, inputString))
   }
@@ -38,12 +38,12 @@ const findMatchCurried = (references, referenceStrings) => (inputString) => {
   const input = createBigrams(inputString)
   const matches = []
   const bestMatch = {
-    distance: -Infinity,
+    score: -Infinity,
   }
   let index = 0
 
   for (const reference of references) {
-    const distance = calculateDistance(
+    const score = calculateScore(
       reference,
       referenceStrings[index],
       input,
@@ -51,11 +51,11 @@ const findMatchCurried = (references, referenceStrings) => (inputString) => {
     )
 
     const match = {
-      distance,
+      score,
       reference: referenceStrings[index],
     }
 
-    if (distance > bestMatch.distance) {
+    if (score > bestMatch.score) {
       Object.assign(bestMatch, match, { index })
     }
 
@@ -80,7 +80,7 @@ const compareStringsCurried = (referenceAsArray, referenceStringAsArray) => (
   inputString
 ) =>
   findMatchCurried(referenceAsArray, referenceStringAsArray)(inputString)
-    .bestMatch.distance
+    .bestMatch.score
 
 export const compareStrings = (reference, input) => {
   const referenceBigrams = createBigrams(reference)
