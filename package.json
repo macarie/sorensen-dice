@@ -5,7 +5,6 @@
   "license": "MIT",
   "type": "module",
   "main": "./index.min.cjs",
-  "module": "./index.min.js",
   "exports": {
     ".": {
       "import": "./index.min.js",
