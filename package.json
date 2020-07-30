@@ -4,12 +4,13 @@
   "description": "Measure how similar two strings are using the Sørensen–Dice Coefficient",
   "license": "MIT",
   "type": "module",
-  "main": "./index.min.cjs",
+  "main": "./index.cjs",
+  "module": "./index.js",
   "exports": {
     ".": {
-      "import": "./index.min.js",
-      "require": "./index.min.cjs",
-      "default": "./index.min.js"
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "default": "./index.js"
     }
   },
   "repository": {
@@ -29,8 +30,8 @@
     "node": ">=12"
   },
   "files": [
-    "index.min.js",
-    "index.min.cjs"
+    "index.js",
+    "index.cjs"
   ],
   "keywords": [
     "closest",
@@ -56,8 +57,7 @@
     "strings"
   ],
   "scripts": {
-    "compile:cjs": "esbuild --minify --bundle --format=cjs --target=esnext --outfile=index.min.cjs index.js",
-    "compile:mjs": "esbuild --minify --target=esnext --outfile=index.min.js index.js",
+    "compile:cjs": "esbuild --bundle --format=cjs --target=esnext --outfile=index.cjs index.js",
     "compile": "run-p -s compile:*",
     "lint": "xo",
     "test": "c8 ava --verbose",
