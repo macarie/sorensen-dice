@@ -1,6 +1,6 @@
 {
   "name": "ksdc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Measure how similar two strings are using the Sørensen–Dice Coefficient",
   "license": "MIT",
   "type": "module",
