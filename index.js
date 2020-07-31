@@ -76,18 +76,20 @@ export const findMatch = (references, input) => {
   return findMatchCurried(referencesBigrams, references)
 }
 
-const compareStringsCurried = (referenceAsArray, referenceStringAsArray) => (
-  inputString
-) =>
-  findMatchCurried(referenceAsArray, referenceStringAsArray)(inputString)
-    .bestMatch.score
+const compareStringsCurried = (reference, referenceString) => (inputString) =>
+  calculateScore(
+    reference,
+    referenceString,
+    createBigrams(inputString),
+    inputString
+  )
 
 export const compareStrings = (reference, input) => {
   const referenceBigrams = createBigrams(reference)
 
   if (input !== undefined) {
-    return compareStringsCurried([referenceBigrams], [reference])(input)
+    return compareStringsCurried(referenceBigrams, reference)(input)
   }
 
-  return compareStringsCurried([referenceBigrams], [reference])
+  return compareStringsCurried(referenceBigrams, reference)
 }
