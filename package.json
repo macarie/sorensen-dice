@@ -32,7 +32,8 @@
   },
   "files": [
     "index.js",
-    "index.cjs"
+    "index.cjs",
+    "index.d.ts"
   ],
   "keywords": [
     "closest",
