@@ -48,7 +48,7 @@ findMatchFromList("zeal")
 
 ### compareStrings(reference, input)
 
-Compare `input` against `reference`, returns the Sørensen–Dice coefficient between the two strings.
+Compare `input` with `reference`, returns the Sørensen–Dice coefficient between the two strings.
 
 This is a [curried](https://en.wikipedia.org/wiki/Currying) function. If `input` is not provided a function that accepts `input` as an argument is returned.
 
@@ -62,7 +62,7 @@ Type: `string`
 
 ### findMatch(references, input)
 
-Compare `input` against a list of strings, `references`, returns an object that has the following properties:
+Compare `input` with a list of strings, `references`, and finds the best match for it, returns an object that has the following properties:
 
 ```typescript
 interface match {
