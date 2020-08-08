@@ -62,7 +62,7 @@ export declare const findMatch: {
    *
    * @returns An object with `bestMatch` and `matches` as properties. `matches` is an array of objects containing `reference` and the `score` between it and `input`. `bestMatch` is the element with the highest `score` from `matches` and its `index`.
    */
-  (references: string[], input: string): number
+  (references: string[], input: string): match
   /**
    * Create a function that accepts `input` as an argument and compares it with `references`.
    *
